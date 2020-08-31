@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>JS Control Flow Example</title>
+   <script>
+"use strict";
+
+// Events
+var html_input;
+var html_output;
+
+function onLoad() {
+   html_input = document.getElementById("input");
+   html_output = document.getElementById("output");
+}
+addEventListener('load', onLoad);
+
+function buttonAction() {
+   const lf = "<br />";
+   var output = "";
+   var date = new Date();
+   var modsecs = date.getSeconds() % 15;
+   if (modsecs === 0) {
+      output += "IT'S GOOBY TIME" + lf;
+   } else {
+      var primeCount = 0;
+      for (var i = 2; i < modsecs; i++)
+         if (isPrime(i))
+            primeCount++;
+      output += "There were " + primeCount + " primes since the last gooby time." + lf;
+   }
+   var primeCount = 1;
+   for (var i = 2; i < 105; i++)
+      if (isPrime(i)) {
+         output += format03i(primeCount) + ": " + format03i(i) + lf;
+         primeCount++;
+      }
+   output += undNochEinUnnoetigerShowcase() + lf;
+   output += undNochFuerRekursion(5) + lf;
+   output += undWarumMachtDasWasAnderes(5) + lf;
+   html_output.innerHTML = output;
+}
+
+// Functions
+function isPrime(num) {
+   for (var i = 2; i * i < num; i++)
+      if (num % i === 0)
+         return false;
+   return true;
+}
+
+function format03i(num) {
+   if (num < 10)
+      return "00" + num;
+   else if (num < 100)
+      return "0" + num;
+   else
+      return num;
+}
+
+function undNochEinUnnoetigerShowcase() {
+   var remainingText = "Dies ist ein Text.";
+   var outputText = "";
+   while (remainingText !== "") {
+      var curchar = remainingText[0];
+      remainingText = remainingText.substr(1);
+      outputText = curchar + outputText;
+   }
+   return outputText;
+}
+
+function undNochFuerRekursion(depth) {
+   if (depth == 0)
+      return "0";
+   return undNochFuerRekursion(depth - 1) + depth;
+}
+
+function undWarumMachtDasWasAnderes(limit) {
+   return 0 + 1 + 2 + 3 + 4 + "5";
+}
+   </script>
+</head>
+
+<body>
+   <h1>JS Control Flow Example</h1>
+   <input type="text" id="input" />
+   <input type="button" value="run" onclick="buttonAction();" />
+   <div id="output"></div>
+</body>
+</html>
+

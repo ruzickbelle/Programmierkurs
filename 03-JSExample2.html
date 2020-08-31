@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>JS Example 2</title>
+   <style>
+input.error {
+   background-color: #f33;
+   font-weight: bold;
+}
+   </style>
+   <script>
+"use strict";
+
+// Events
+var re_isDigit;
+var html_input;
+var html_output;
+
+function onLoad() {
+   re_isDigit = new RegExp("^[1-9]$");
+   html_input = document.getElementById("input");
+   html_output = document.getElementById("output");
+}
+addEventListener('load', onLoad);
+
+function buttonDoSomething() {
+   var input = html_input.value;
+   var output;
+   if (input.match(re_isDigit) === null) {
+      html_input.classList.add("error");
+      html_output.innerText = "Enter a number between 1 and 9.";
+      return;
+   } else {
+      html_input.classList.remove("error");
+      output = parseInt(input) + 1;
+   }
+   html_output.innerText = output;
+}
+
+function buttonCopyOutToIn() {
+   html_input.value = html_output.innerText;
+}
+   </script>
+</head>
+
+<body>
+   <h1>JS Example 2</h1>
+   <input type="text" id="input" />
+   <input type="button" value="do something" onclick="buttonDoSomething();" />
+   <input type="button" value="copy out to in" onclick="buttonCopyOutToIn();" />
+   <div id="output"></div>
+</body>
+</html>
+

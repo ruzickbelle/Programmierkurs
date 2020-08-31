@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>CSS Cheat Sheet</title>
+   <style>
+      h1 {
+         background-color: red;
+      }
+
+      .title {
+         color: green;
+      }
+
+      .centered {
+         text-align: center;
+      }
+
+      #hugo {
+         font-weight: bold;
+      }
+
+      div.container {
+         background-color: yellow;
+      }
+
+      div.container > span {
+         background-color: black;
+         color: white;
+      }
+
+      table#sudoku {
+         border-collapse: collapse;
+         border: 1px solid black;
+      }
+
+      table#sudoku > tbody > tr {
+      }
+
+      table#sudoku > tbody > tr + tr + tr {
+         border-bottom: 2px solid black;
+      }
+
+      table#sudoku > tbody > tr + tr + tr + tr {
+         border-bottom: none;
+      }
+
+      table#sudoku > tbody > tr + tr + tr + tr + tr + tr {
+         border-bottom: 2px solid black;
+      }
+
+      table#sudoku > tbody > tr + tr + tr + tr + tr + tr + tr {
+         border-bottom: none;
+      }
+
+      table#sudoku > tbody > tr > td {
+         width: 1em;
+         height: 1em;
+         border: 1px solid black;
+      }
+
+      table#sudoku > tbody > tr > td + td + td {
+         border-right: 2px solid black;
+      }
+
+      table#sudoku > tbody > tr > td + td + td + td {
+         border-right: none;
+      }
+
+      table#sudoku > tbody > tr > td + td + td + td + td + td {
+         border-right: 2px solid black;
+      }
+
+      table#sudoku > tbody > tr > td + td + td + td + td + td + td {
+         border-right: none;
+      }
+
+      table#sudoku > tbody > tr > td > input {
+         border: none;
+         width: 1em;
+         height: 1em;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   <h1 class="title centered">CSS Cheat Sheet</h1>
+   <p>Text</p>
+   <p id="hugo">Hugo Absatz</p>
+   <p>Text</p>
+   <div class="container">
+      <span>In span, </span>out of span, <span>in span</span>.
+   </div>
+   <span class="container">Text</span>
+
+   <hr />
+
+   <table id="sudoku">
+      <tbody>
+         <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr><tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr>
+      </tbody>
+   </table>
+</body>
+</html>
+

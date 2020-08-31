@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>JS Control Flow Example</title>
+   <script>
+"use strict";
+
+// Events
+var html_root;
+
+function onLoad() {
+   html_root = document.getElementById("root");
+}
+addEventListener('load', onLoad);
+
+function buttonAction() {
+   var html_tds = html_root.getElementsByTagName("td");
+   var index = 0;
+   for (var html_td of html_tds) {
+      html_td.innerText = index;
+      index++;
+   }
+   undJetztEinPaarErklaerungen();
+}
+
+// Functions
+function undJetztEinPaarErklaerungen() {
+   console.log("Hier ist mal ein JavaScript Objekt:");
+   var obj = {};
+   obj.foo = "one";
+   obj.bar = "two";
+   obj.moo = "tre";
+   console.log(obj);
+   for (var key in obj)
+      console.log(key + ": " + obj[key]);
+   console.log("---");
+   console.log("Demenetsprechend fuer Listen:");
+   var lst = ["monday", "food", "bananas", "gooby time"]
+   for (var key in lst)
+      console.log(key + ": " + lst[key]);
+   console.log("---");
+   console.log("Oder einfach die kuerzere Variante, wenn man nur die Werte braucht:");
+   for (var val of lst)
+      console.log(val);
+}
+   </script>
+</head>
+
+<body>
+   <h1>JS List Example</h1>
+   <input type="button" value="run" onclick="buttonAction();" />
+   <table id="root">
+      <tr>
+         <td>a</td>
+         <td>b</td>
+      </tr><tr>
+         <td>c</td>
+         <td>d</td>
+      </tr>
+   </table>
+</body>
+</html>
+
