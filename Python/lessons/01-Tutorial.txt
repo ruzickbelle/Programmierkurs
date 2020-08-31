@@ -1,0 +1,5 @@
+Ich empfehle das Python 3 Tutorial, weil dies nicht nur als Einsteig in Python, sondern auch Programmierung generell, gut geeignet ist.
+
+Python 3 Tutorial
+   https://docs.python.org/3/tutorial/index.html
+
