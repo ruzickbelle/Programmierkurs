@@ -21,6 +21,7 @@ addEventListener('load', onLoad);
 
 function buttonDoSomething() {
    var input = html_input.value;
+   var output;
    if (input.match(re_isDigit) === null)
       output = input;
    else
